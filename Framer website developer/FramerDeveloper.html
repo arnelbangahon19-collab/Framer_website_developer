@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arnel A. Bangahon — Framer & Web Developer</title>
+  <meta name="description" content="Arnel Bangahon — Framer, HTML, and front-end developer. Portfolio showcasing Framer projects, Webflow builds, and Shopify demos." />
+  <style>
+    :root{
+      --accent:#ff6b6b;
+      --muted:#6b7280;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#071028 0%, #081229 60%);color:#e6eef8;-webkit-font-smoothing:antialiased;line-height:1.5}
+    .wrap{max-width:1000px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:96px;height:96px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,0.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro h1{margin:0;font-size:1.6rem}
+    .intro p{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+
+    .actions{margin-top:14px;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#081229;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#e6eef8}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:28px}
+
+    /* Main */
+    main .card{background:linear-gradient(180deg,var(--glass),var(--glass-2));border-radius:12px;padding:18px}
+    h2{margin-top:0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:600;font-size:0.85rem;color:#cfe8ff}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+    .proj{background:#071428;border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
+    .proj h3{margin:0 0 8px;font-size:1rem}
+    .proj p{margin:0;color:var(--muted);font-size:0.9rem}
+    .proj a{display:inline-block;margin-top:10px;text-decoration:none;color:var(--accent);font-weight:700}
+
+    /* Sidebar */
+    aside .card{position:sticky;top:24px}
+    .contact li{list-style:none;margin-bottom:8px}
+    .small{font-size:0.86rem;color:var(--muted)}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,0.7);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:all .18s}
+    .modal.open{opacity:1;pointer-events:auto}
+    .modal .box{background:#071229;padding:20px;border-radius:12px;max-width:860px;width:100%;border:1px solid rgba(255,255,255,0.04)}
+    .close{float:right;background:transparent;border:0;color:var(--muted);font-weight:700}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:72px;height:72px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar"><img src="Arnel.jpg" alt="Arnel"></div>
+      <div class="intro">
+        <h1>Arnel A. Bangahon</h1>
+        <p class="small">Framer & Front‑End Developer • Shopify / Webflow • HTML · CSS · JavaScript</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/arnelbangahon19-collab/Framer_website_developer/blob/main/arnel%20a.%20bangahonCV.pdf" target="_blank">View or Download CV</a>
+          <a class="btn secondary" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2>About</h2>
+          <p class="small">I build responsive websites and Framer prototypes focused on clean code, performance, and converting users. I create Framer sites from templates or custom builds and integrate third‑party tools when needed.</p>
+
+          <h2 style="margin-top:16px">Skills</h2>
+          <div class="skills">
+            <span class="pill">Framer (site + code)</span>
+            <span class="pill">HTML & CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Shopify (Liquid)</span>
+            <span class="pill">Webflow</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">Basic SEO & Performance</span>
+          </div>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:14px">
+          <h2>Selected Projects</h2>
+          <div class="projects">
+            <article class="proj">
+              <h3>Framer Fashion Site (Demo)</h3>
+              <p>Custom Framer build from a clean design. Responsive interactions and CMS-driven product listing (demo).</p>
+              <a href="#" data-title="Framer Fashion" data-desc="Custom Framer build with animations, product listing, and CMS-driven content." class="open">Details</a>
+            </article>
+
+            <article class="proj">
+              <h3>Shopify Store Mockup</h3>
+              <p>Demo Shopify store showcasing product pages, collections, and checkout flow. Theme customization using Liquid.</p>
+              <a href="http://127.0.0.1:5501/Shopify.html" target="_blank">View</a>
+            </article>
+
+            <article class="proj">
+              <h3>Webflow Landing Page</h3>
+              <p>High-converting Webflow landing page template optimized for mobile and speed.</p>
+              <a href="#" data-title="Webflow Landing" data-desc="Webflow landing page with conversion-focused sections and responsive UI." class="open">Details</a>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <h2>Availability & Rates</h2>
+          <p class="small">Open to freelance gigs and part-time roles. Typical rate for Framer & front-end work: <strong>$5–$12/hour</strong> depending on scope. Available up to 20 hrs/week.</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h2>Contact</h2>
+          <ul class="contact">
+            <li>My gmail: <a href="mailto:arnelbangahon19@gmail.com">arnelbangahon19@gmail.com</a></li>
+            <li>Phone #: +639664617079</li>
+            <li class="small">GitHub: <a href="https://github.com/arnelbangahon19" target="_blank">github.com/arnelbangahon19</a></li>
+            <li class="small">
+            Facebook: <a href="https://www.facebook.com/arnel.bangahon" target="_blank">Facebook Profile</a>
+            </li>
+          </ul>
+          <h2 style="margin-top:14px">Quick Info</h2>
+          <p class="small">Preferred tools: Framer, VSCode, Git. Strong communicator in English. Reliable and detail-oriented.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© 2025 Arnel A. Bangahon — Framer & Front‑End Developer</p>
+    </footer>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="box">
+      <button class="close" id="closeBtn">Close</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script>
+    // project modal
+    document.querySelectorAll('.open').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const title = btn.getAttribute('data-title');
+        const desc = btn.getAttribute('data-desc');
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalDesc').textContent = desc;
+        document.getElementById('modal').classList.add('open');
+      })
+    })
+    document.getElementById('closeBtn').addEventListener('click', ()=> document.getElementById('modal').classList.remove('open'));
+
+    // smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const href = this.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
